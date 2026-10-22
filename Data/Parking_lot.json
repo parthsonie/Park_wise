@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "ownerId": 2,
+        "name": "City Mall Parking",
+        "location": "City Mall, Surat, Gujarat",
+        "distance": "0.8 km",
+        "estimatedTime": "5 mins",
+        "rating": 4.5,
+        "reviews": 120,
+        "pricePerHour": 40,
+        "totalSlots": 50,
+        "availableSlots": 32,
+        "bookedSlots": 18,
+        "image": "/Images/city-mall-parking.jpg",
+        "vehicleTypes": [
+            "Car",
+            "Bike",
+            "SUV"
+        ],
+        "charges": {
+            "1hour": 40,
+            "2hours": 70,
+            "1day": 200
+        }
+    },
+    {
+        "id": 2,
+        "ownerId": 2,
+        "name": "Central Business Park",
+        "location": "Ring Road, Surat, Gujarat",
+        "distance": "1.2 km",
+        "estimatedTime": "7 mins",
+        "rating": 4.2,
+        "reviews": 85,
+        "pricePerHour": 50,
+        "totalSlots": 40,
+        "availableSlots": 8,
+        "bookedSlots": 32,
+        "image": "/Images/business-parking.jpg",
+        "vehicleTypes": [
+            "Car",
+            "Bike"
+        ],
+        "charges": {
+            "1hour": 50,
+            "2hours": 90,
+            "1day": 250
+        }
+    },
+    {
+        "id": 3,
+        "ownerId": 2,
+        "name": "Riverside Parking",
+        "location": "Riverside Road, Surat, Gujarat",
+        "distance": "1.5 km",
+        "estimatedTime": "10 mins",
+        "rating": 4.0,
+        "reviews": 60,
+        "pricePerHour": 35,
+        "totalSlots": 30,
+        "availableSlots": 15,
+        "bookedSlots": 15,
+        "image": "/Images/riverside-parking.jpg",
+        "vehicleTypes": [
+            "Car",
+            "Bike",
+            "SUV"
+        ],
+        "charges": {
+            "1hour": 35,
+            "2hours": 60,
+            "1day": 180
+        }
+    }
+]

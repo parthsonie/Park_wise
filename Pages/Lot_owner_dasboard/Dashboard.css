@@ -1,0 +1,444 @@
+
+/* ==========================================
+   PARKWISE - LOT OWNER DASHBOARD
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background-color: #edf6ff;
+    color: #071d5c;
+}
+
+/* ==========================================
+   MAIN PAGE LAYOUT
+========================================== */
+
+.Main_pg {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #f6fbff 0%,
+        #eaf5ff 100%
+    );
+}
+
+
+/* ==========================================
+   RIGHT DASHBOARD AREA
+========================================== */
+
+.Search_pg {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 0 25px 35px;
+}
+
+/* ==========================================
+   TOP NAVIGATION BAR
+========================================== */
+
+.upper_nav {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.upper_nav .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 70px;
+    padding: 12px 25px;
+    background: #ffffff;
+    border: 1px solid #e0ebfb;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(25, 75, 150, 0.05);
+}
+
+.upper_nav .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0;
+}
+
+/* Owner Profile */
+
+.profile_access {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile_access img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e3efff;
+    border: 2px solid #d9e9ff;
+}
+
+.profile_access h5 {
+    margin: 0;
+    color: #143775;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   DASHBOARD CONTENT
+========================================== */
+
+.dashboard_content {
+    width: 100%;
+    padding: 30px 5px;
+}
+
+.dashboard_content > h3 {
+    margin: 0 0 25px;
+    font-size: 27px;
+    font-weight: 700;
+    color: #071d5c;
+    letter-spacing: -0.4px;
+}
+
+/* ==========================================
+   DASHBOARD STATISTICS CARDS
+========================================== */
+
+.Card_container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.Card_container .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 145px;
+    padding: 24px 25px;
+    background: #ffffff;
+    border: 1px solid #dce9fa;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(25, 85, 160, 0.06);
+    transition: all 0.25s ease;
+}
+
+.Card_container .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(25, 85, 160, 0.11);
+}
+
+/* Card Titles */
+
+.Card_container .card h5 {
+    margin: 0 0 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #6983b0;
+}
+
+/* Card Values */
+
+.Card_container .card h6 {
+    margin: 0;
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #092d78;
+}
+
+/* Total Slots */
+
+.Card_container .card:nth-child(1) {
+    border-top: 3px solid #0866ff;
+}
+
+.Card_container .card:nth-child(1) h6 {
+    color: #0866ff;
+}
+
+/* Available Slots */
+
+.Card_container .card:nth-child(2) {
+    border-top: 3px solid #22b573;
+}
+
+.Card_container .card:nth-child(2) h6 {
+    color: #159653;
+}
+
+/* Booked Slots */
+
+.Card_container .card:nth-child(3) {
+    border-top: 3px solid #ffad32;
+}
+
+.Card_container .card:nth-child(3) h6 {
+    color: #123c82;
+}
+
+/* ==========================================
+   RECENT BOOKINGS SECTION
+========================================== */
+
+.recent_bookings {
+    width: 100%;
+    min-height: 330px;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #dce9fa;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(25, 85, 160, 0.06);
+}
+
+.recent_bookings > h3 {
+    margin: 0 0 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e7effa;
+    font-size: 20px;
+    font-weight: 700;
+    color: #071d5c;
+}
+
+/* Future bookings table */
+
+.recent_bookings table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.recent_bookings thead {
+    background: #f4f8ff;
+}
+
+.recent_bookings th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #31578f;
+    border-bottom: 1px solid #e2ecfa;
+}
+
+.recent_bookings td {
+    padding: 15px 16px;
+    color: #173a78;
+    border-bottom: 1px solid #edf2fa;
+}
+
+.recent_bookings tbody tr {
+    transition: background 0.2s ease;
+}
+
+.recent_bookings tbody tr:hover {
+    background: #f7fbff;
+}
+
+.recent_bookings tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1200px) {
+    .Side_nav_bar {
+        width: 215px;
+        min-width: 215px;
+    }
+
+    .Side_nav_bar .sidebar {
+        --cui-sidebar-width: 215px;
+    }
+
+    .Search_pg {
+        padding: 0 20px 30px;
+    }
+
+    .Card_container {
+        gap: 15px;
+    }
+
+    .Card_container .card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .Side_nav_bar {
+        width: 80px;
+        min-width: 80px;
+    }
+
+    .Side_nav_bar .sidebar {
+        --cui-sidebar-width: 80px;
+    }
+
+    .Side_nav_bar .sidebar-brand img {
+        width: 55px;
+    }
+
+    .Side_nav_bar .nav-link {
+        justify-content: center;
+        padding: 14px 10px;
+    }
+
+    .Side_nav_bar .nav-link h5 {
+        display: none;
+    }
+
+    .Side_nav_bar .nav-link i {
+        font-size: 21px;
+    }
+
+    .Card_container {
+        gap: 12px;
+    }
+
+    .Card_container .card h6 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Search_pg {
+        padding: 0 12px 25px;
+    }
+
+    .dashboard_content {
+        padding: 25px 0;
+    }
+
+    .dashboard_content > h3 {
+        font-size: 24px;
+    }
+
+    .Card_container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .Card_container .card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .recent_bookings {
+        padding: 18px;
+        overflow-x: auto;
+    }
+
+    .recent_bookings table {
+        min-width: 550px;
+    }
+}
+
+@media (max-width: 576px) {
+    .Side_nav_bar {
+        width: 62px;
+        min-width: 62px;
+    }
+
+    .Side_nav_bar .sidebar {
+        --cui-sidebar-width: 62px;
+    }
+
+    .Side_nav_bar .sidebar-header {
+        height: 65px;
+        padding: 8px;
+    }
+
+    .Side_nav_bar .sidebar-brand img {
+        width: 42px;
+    }
+
+    .Side_nav_bar .sidebar-nav {
+        padding: 12px 5px;
+    }
+
+    .Side_nav_bar .nav-link {
+        padding: 12px 5px;
+    }
+
+    .Side_nav_bar .nav-link i {
+        font-size: 19px;
+    }
+
+    .Search_pg {
+        padding: 0 8px 20px;
+    }
+
+    .upper_nav .navbar {
+        min-height: 60px;
+        padding: 10px 12px;
+    }
+
+    .profile_access img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .profile_access h5 {
+        font-size: 12px;
+    }
+
+    .dashboard_content > h3 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .Card_container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .Card_container .card:last-child {
+        grid-column: auto;
+    }
+
+    .Card_container .card {
+        min-height: 115px;
+        padding: 18px;
+    }
+
+    .Card_container .card h5 {
+        font-size: 14px;
+    }
+
+    .Card_container .card h6 {
+        font-size: 30px;
+    }
+
+    .recent_bookings {
+        min-height: 280px;
+        padding: 15px;
+    }
+
+    .recent_bookings > h3 {
+        font-size: 18px;
+    }
+}

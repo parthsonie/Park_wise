@@ -1,0 +1,528 @@
+
+/* =========================================
+   PARKWISE - PROFILE / SETTINGS PAGE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: #edf7ff;
+    color: #071d5c;
+}
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.Main_pg {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #f5fbff 0%,
+        #e8f5ff 100%
+    );
+}
+
+/* =========================================
+   RIGHT PAGE CONTENT
+========================================= */
+
+.Search_pg {
+    flex: 1;
+    min-width: 0;
+    padding: 0 20px 30px;
+}
+
+/* =========================================
+   TOP NAVIGATION BAR
+========================================= */
+
+.upper_nav {
+    width: 100%;
+    padding-top: 8px;
+}
+
+.upper_nav .navbar {
+    width: 100%;
+    min-height: 72px;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e4efff;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(24, 80, 160, 0.06);
+}
+
+.upper_nav .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 0;
+}
+
+.upper_nav .navbar-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex: 1;
+    margin: 0;
+}
+
+.upper_nav .form-group {
+    width: min(490px, 100%);
+    margin: 0 auto;
+}
+
+.upper_nav .form-control {
+    width: 100%;
+    height: 44px;
+    padding: 10px 20px;
+    background: #f1f6fd;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #123675;
+    outline: none;
+    box-shadow: none;
+}
+
+.upper_nav .form-control::placeholder {
+    color: #42639c;
+}
+
+.upper_nav .form-control:focus {
+    background: #ffffff;
+    border-color: #438aff;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.08);
+}
+
+.upper_nav .navbar-form > i {
+    font-size: 21px;
+    color: #28518e;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.upper_nav .navbar-form > i:hover {
+    color: #0066ff;
+}
+
+/* Top right profile */
+
+.profile_access {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.profile_access img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #dcecff;
+    border: 2px solid #e7f1ff;
+}
+
+.profile_access h5 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #09296b;
+}
+
+/* =========================================
+   PROFILE PAGE
+========================================= */
+
+.Profile_pg {
+    width: 100%;
+    padding: 28px 8px 0;
+}
+
+.Profile_pg > h2 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #071d66;
+    letter-spacing: -0.5px;
+}
+
+.Profile_pg > p {
+    margin: 0 0 24px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #6884b8;
+    line-height: 1.6;
+}
+
+/* =========================================
+   INNER PROFILE LAYOUT
+========================================= */
+
+.inner_container {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    min-height: 595px;
+}
+
+/* =========================================
+   INNER SETTINGS SIDEBAR
+========================================= */
+
+.inner_side_bar {
+    width: 320px;
+    min-width: 320px;
+    background: #ffffff;
+    border: 1px solid #e5effb;
+    border-radius: 14px;
+    padding: 10px 12px;
+    box-shadow: 0 5px 20px rgba(25, 85, 160, 0.07);
+    overflow: hidden;
+}
+
+.inner_side_bar .sidebar {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none !important;
+}
+
+.inner_side_bar .sidebar-nav {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+}
+
+.inner_side_bar .nav-item {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.inner_side_bar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 18px;
+    border-radius: 9px;
+    color: #163979;
+    background: transparent;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.inner_side_bar .nav-link > i:first-child {
+    width: 25px;
+    min-width: 25px;
+    font-size: 21px;
+    color: #315a9b;
+    text-align: center;
+}
+
+.inner_side_bar .nav-link h5 {
+    flex: 1;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: inherit;
+    white-space: nowrap;
+}
+
+.inner_side_bar .nav-link > i:last-child:not(:first-child) {
+    margin-left: auto;
+    font-size: 15px;
+    color: #315a9b;
+}
+
+.inner_side_bar .nav-link:hover {
+    background: #edf6ff;
+    color: #0066ff;
+}
+
+.inner_side_bar .nav-link:hover i {
+    color: #0066ff;
+}
+
+/* Selected profile option */
+
+.inner_side_bar .nav-item:first-child .nav-link {
+    background: #e3f0ff;
+    color: #0066ff;
+}
+
+.inner_side_bar .nav-item:first-child .nav-link h5 {
+    font-weight: 600;
+}
+
+.inner_side_bar .nav-item:first-child .nav-link i {
+    color: #0066ff;
+}
+
+/* Logout option */
+
+.inner_side_bar .nav-item:last-child {
+    margin-top: 8px;
+}
+
+.inner_side_bar .nav-item:last-child .nav-link,
+.inner_side_bar .nav-item:last-child .nav-link h5,
+.inner_side_bar .nav-item:last-child .nav-link i {
+    color: #ff3030;
+}
+
+.inner_side_bar .nav-item:last-child .nav-link:hover {
+    background: #fff0f0;
+}
+
+/* Disabled navigation appearance */
+
+.inner_side_bar .nav-link.disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+/* =========================================
+   PROFILE INFORMATION CONTENT
+========================================= */
+
+.section_content {
+    flex: 1;
+    min-width: 0;
+    min-height: 595px;
+    padding: 26px;
+    background: #ffffff;
+    border: 1px solid #d7e7ff;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(25, 85, 160, 0.07);
+}
+
+/* Future profile section heading */
+
+.section_content h2 {
+    margin: 0 0 8px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #071d5c;
+}
+
+.section_content p {
+    font-size: 14px;
+    color: #6480b2;
+    line-height: 1.6;
+}
+
+/* Profile form fields */
+
+.section_content input,
+.section_content select,
+.section_content textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 15px;
+    border: 1px solid #d5e5fa;
+    border-radius: 9px;
+    background: #f7faff;
+    color: #09265f;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.section_content input:focus,
+.section_content select:focus,
+.section_content textarea:focus {
+    border-color: #0866ff;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(8, 102, 255, 0.08);
+}
+
+/* Buttons */
+
+.section_content button {
+    padding: 11px 22px;
+    border: 1px solid #0866ff;
+    border-radius: 9px;
+    background: #0866ff;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.section_content button:hover {
+    background: #0055d9;
+    box-shadow: 0 4px 12px rgba(8, 102, 255, 0.18);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1200px) {
+    .Side_nav_bar {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .inner_side_bar {
+        width: 270px;
+        min-width: 270px;
+    }
+
+    .section_content {
+        padding: 20px;
+    }
+
+    .Profile_pg > h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .Side_nav_bar {
+        width: 85px;
+        min-width: 85px;
+    }
+
+    .Side_nav_bar .sidebar-brand img {
+        width: 55px;
+    }
+
+    .Side_nav_bar .nav-link {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .Side_nav_bar .nav-link h5 {
+        display: none;
+    }
+
+    .Side_nav_bar .nav-link i {
+        font-size: 23px;
+    }
+
+    .inner_side_bar {
+        width: 230px;
+        min-width: 230px;
+    }
+
+    .inner_side_bar .nav-link {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .inner_side_bar .nav-link h5 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Search_pg {
+        padding: 0 12px 20px;
+    }
+
+    .upper_nav .navbar {
+        padding: 12px 15px;
+    }
+
+    .upper_nav .container-fluid {
+        gap: 12px;
+    }
+
+    .upper_nav .navbar-form {
+        gap: 12px;
+    }
+
+    .Profile_pg {
+        padding: 24px 0 0;
+    }
+
+    .inner_container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .inner_side_bar {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .section_content {
+        width: 100%;
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 576px) {
+    .Side_nav_bar {
+        width: 65px;
+        min-width: 65px;
+    }
+
+    .Side_nav_bar .sidebar-header {
+        padding: 10px 5px;
+    }
+
+    .Side_nav_bar .sidebar-brand img {
+        width: 45px;
+    }
+
+    .Side_nav_bar .nav-link {
+        padding: 12px 8px;
+    }
+
+    .Search_pg {
+        padding: 0 8px 15px;
+    }
+
+    .upper_nav .navbar {
+        min-height: 65px;
+        padding: 10px;
+    }
+
+    .upper_nav .form-control {
+        height: 40px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .profile_access h5 {
+        display: none;
+    }
+
+    .profile_access img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .Profile_pg > h2 {
+        font-size: 22px;
+    }
+
+    .Profile_pg > p {
+        font-size: 13px;
+    }
+
+    .inner_side_bar {
+        padding: 10px;
+    }
+
+    .section_content {
+        padding: 16px;
+    }
+}

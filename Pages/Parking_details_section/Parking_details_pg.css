@@ -1,0 +1,430 @@
+/* Main content and navbar */
+.Page_content {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding-bottom: 30px;
+    background: #f4f9ff;
+}
+
+.Page_content .upper_nav {
+    height: 65px;
+    background: #fff;
+    border-bottom: 1px solid #e1ebfa;
+}
+
+.Page_content .upper_nav .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+    margin: 0;
+    background: #fff;
+    border: 0;
+    border-radius: 0;
+}
+
+.Page_content .upper_nav .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.Page_content .upper_nav .navbar-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+.Page_content .upper_nav .navbar-form h5 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #082765;
+}
+
+.Page_content .upper_nav .btn-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 7px;
+    color: #0866ff;
+    cursor: pointer;
+}
+
+.Page_content .upper_nav .btn-default:hover {
+    background: #e8f2ff;
+}
+
+.Page_content .upper_nav .btn-default i {
+    font-size: 19px;
+}
+
+.Page_content .profile_access {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Page_content .profile_access img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e8f1ff;
+    border: 2px solid #dce9ff;
+}
+
+.Page_content .profile_access h5 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #31568f;
+}
+
+/* Parking details */
+.Parking_lot_details {
+    margin: 20px 25px 16px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #dfeafa;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(18, 74, 150, .04);
+}
+
+.Parking_lot_details>img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 9px;
+    margin-bottom: 14px;
+    background: #e9f1fa;
+}
+
+.Parking_lot_details .name {
+    margin: 0 0 7px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #082765;
+}
+
+.Parking_lot_details>p {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: #52709e;
+}
+
+.Parking_lot_details>p i {
+    margin-right: 5px;
+    color: #0866ff;
+}
+
+.Parking_lot_details .ratings {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    color: #31568f;
+}
+
+/* Slots and pricing cards */
+.Slot_and_pricings {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 15px;
+    margin: 0 25px;
+    align-items: start;
+}
+
+.Slot_access,
+.Price_card {
+    min-width: 0;
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #dfeafa;
+    border-radius: 11px;
+    box-shadow: 0 3px 12px rgba(18, 74, 150, .04);
+}
+
+.Slot_access>h5 {
+    margin: 0 0 15px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #082765;
+}
+
+.Price_card>h5 {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #082765;
+}
+
+/* Slot status legend */
+.Slot_access>div:first-of-type {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 15px;
+}
+
+.Slot_access>div:first-of-type>span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.Slot_access>div:first-of-type>span>div {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.Slot_access>div:first-of-type>span:nth-child(1)>div {
+    background: #18b86b;
+}
+
+.Slot_access>div:first-of-type>span:nth-child(2)>div {
+    background: #ff6979;
+}
+
+.Slot_access>div:first-of-type>span:nth-child(3)>div {
+    background: #9db9df;
+}
+
+.Slot_access>div:first-of-type>span>p {
+    margin: 0;
+    font-size: 12px;
+    color: #52709e;
+}
+
+/* Slot grid and buttons */
+.Slot_access>.slot {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slot>div {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+}
+
+.slot>div>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 42px;
+    padding: 8px 4px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+.slot .Available>button {
+    background: #d9f8e8;
+    color: #078347;
+    cursor: pointer;
+}
+
+.slot .Available>button:hover {
+    background: #b9efd2;
+    border-color: #18b86b;
+    transform: translateY(-2px);
+}
+
+.slot .Reserved>button {
+    background: #ffe0e4;
+    color: #e04658;
+    cursor: not-allowed;
+}
+
+.slot .Booked>button {
+    background: #e5eef9;
+    color: #6482aa;
+    cursor: not-allowed;
+}
+
+.slot>div>button:disabled {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.slot .selected>button {
+    background: #0866ff;
+    color: #fff;
+    border-color: #0051df;
+}
+
+/* Pricing and vehicle selection */
+.charges {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf2fa;
+}
+
+.charges h5 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #52709e;
+}
+
+.charges h5:last-child {
+    font-weight: 700;
+    color: #082765;
+}
+
+.Vechile_type {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    padding-top: 14px;
+    border-top: 1px solid #edf2fa;
+}
+
+.Vechile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 85px;
+    height: 70px;
+    padding: 9px;
+    background: #fff;
+    border: 1px solid #dce8f7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.Vechile i {
+    font-size: 21px;
+    color: #52709e;
+}
+
+.Vechile h6 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #52709e;
+}
+
+.Vechile:hover {
+    background: #edf5ff;
+    border-color: #0866ff;
+}
+
+
+.Vechile_selected {
+    background: #e8f2ff;
+    border: 1.5px solid #0866ff;
+    color: #0866ff;
+}
+
+
+/* Booking button */
+.Slot_and_pricings>.btn {
+    grid-column: 1 / -1;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.Slot_and_pricings>.btn>button {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 10px 20px;
+    background: #0866ff;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.Slot_and_pricings>.btn>button:hover {
+    background: #0050d8;
+    box-shadow: 0 5px 15px rgba(8, 102, 255, .25);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .Slot_and_pricings {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .Parking_lot_details {
+        margin: 15px;
+        padding: 12px;
+    }
+
+    .Slot_and_pricings {
+        margin: 0 15px;
+    }
+
+    .Parking_lot_details>img {
+        height: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Parking_lot_details .name {
+        font-size: 18px;
+    }
+
+    .Slot_access,
+    .Price_card {
+        padding: 14px;
+    }
+
+    .Slot_access>.slot {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .Vechile {
+        width: 75px;
+        height: 68px;
+    }
+}

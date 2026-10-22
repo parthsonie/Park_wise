@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "parkingLotId": 1,
+        "slotNumber": "A1",
+        "status": "Available",
+        "vehicleType": "Car"
+    },
+    {
+        "id": 2,
+        "parkingLotId": 1,
+        "slotNumber": "A2",
+        "status": "Available",
+        "vehicleType": "Car"
+    },
+    {
+        "id": 3,
+        "parkingLotId": 1,
+        "slotNumber": "A3",
+        "status": "Booked",
+        "vehicleType": "Car"
+    },
+    {
+        "id": 4,
+        "parkingLotId": 1,
+        "slotNumber": "A4",
+        "status": "Available",
+        "vehicleType": "Car"
+    },
+    {
+        "id": 5,
+        "parkingLotId": 1,
+        "slotNumber": "A5",
+        "status": "Available",
+        "vehicleType": "Car"
+    },
+    {
+        "id": 6,
+        "parkingLotId": 1,
+        "slotNumber": "B1",
+        "status": "Available",
+        "vehicleType": "Bike"
+    },
+    {
+        "id": 7,
+        "parkingLotId": 1,
+        "slotNumber": "B2",
+        "status": "Reserved",
+        "vehicleType": "Bike"
+    },
+    {
+        "id": 8,
+        "parkingLotId": 1,
+        "slotNumber": "B3",
+        "status": "Available",
+        "vehicleType": "Bike"
+    },
+    {
+        "id": 9,
+        "parkingLotId": 1,
+        "slotNumber": "C1",
+        "status": "Available",
+        "vehicleType": "SUV"
+    },
+    {
+        "id": 10,
+        "parkingLotId": 1,
+        "slotNumber": "C2",
+        "status": "Booked",
+        "vehicleType": "SUV"
+    }
+]
+

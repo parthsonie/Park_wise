@@ -1,0 +1,314 @@
+
+/* =========================================
+   PARKWISE - MY BOOKINGS PAGE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+.Main_pg {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: #f3f8ff;
+    font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.Main_pg_content {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 35px 45px;
+    background: linear-gradient(
+        135deg,
+        #f8fbff 0%,
+        #edf5ff 100%
+    );
+    overflow-y: auto;
+}
+
+/* Page Heading */
+
+.Main_pg_content > h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #092d78;
+    margin: 0 0 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dce8f7;
+    letter-spacing: -0.5px;
+}
+
+/* =========================================
+   UPCOMING BOOKINGS CONTAINER
+========================================= */
+
+.upcoming_bookings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 10px 0 25px;
+}
+
+/* =========================================
+   BOOKING ENTRY CARDS
+========================================= */
+
+.entry_cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+
+    width: 100%;
+    padding: 18px 20px;
+
+    background: #ffffff;
+    border: 1px solid #e0eaf8;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(20, 72, 140, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.entry_cards:hover {
+    transform: translateY(-3px);
+    border-color: #b8d3ff;
+    box-shadow: 0 8px 22px rgba(20, 72, 140, 0.10);
+}
+
+/* =========================================
+   PARKING LOT INFORMATION
+========================================= */
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Parking Image */
+
+.lot_img {
+    width: 95px;
+    height: 90px;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    overflow: hidden;
+    background: #e8f2ff;
+}
+
+.lot_img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Parking Text */
+
+.lot_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    min-width: 0;
+}
+
+.lot_text h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #092d78;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.lot_text h6 {
+    font-size: 13px;
+    font-weight: 400;
+    color: #5274ad;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.lot_text h6:nth-child(2) {
+    font-weight: 500;
+    color: #315b9c;
+}
+
+/* =========================================
+   PRICE AND BOOKING STATUS
+========================================= */
+
+.price_and_status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+
+.price_and_status > h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #092d78;
+    margin: 0;
+}
+
+/* Status Badge */
+
+.price_label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+    padding: 7px 14px;
+
+    background: #dcfce9;
+    border-radius: 20px;
+}
+
+.price_label h5 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #159455;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* =========================================
+   PAST BOOKINGS
+========================================= */
+
+.past_bookings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* Laptops */
+
+@media (max-width: 1200px) {
+    .Main_pg_content {
+        padding: 30px;
+    }
+
+    .upcoming_bookings,
+    .past_bookings {
+        max-width: 100%;
+    }
+}
+
+/* Tablets */
+
+@media (max-width: 768px) {
+    .Main_pg_content {
+        padding: 25px 20px;
+    }
+
+    .Main_pg_content > h3 {
+        font-size: 23px;
+        margin-bottom: 22px;
+    }
+
+    .entry_cards {
+        padding: 15px;
+    }
+
+    .lot_img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .lot_text h4 {
+        font-size: 15px;
+    }
+
+    .lot_text h6 {
+        font-size: 12px;
+    }
+
+    .price_and_status > h5 {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Devices */
+
+@media (max-width: 480px) {
+    .Main_pg_content {
+        padding: 20px 12px;
+    }
+
+    .Main_pg_content > h3 {
+        font-size: 21px;
+        padding-bottom: 15px;
+    }
+
+    .upcoming_bookings {
+        gap: 12px;
+    }
+
+    .entry_cards {
+        padding: 12px;
+        gap: 12px;
+        border-radius: 9px;
+    }
+
+    .info {
+        gap: 12px;
+    }
+
+    .lot_img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .lot_text {
+        gap: 5px;
+    }
+
+    .lot_text h4 {
+        font-size: 14px;
+    }
+
+    .lot_text h6 {
+        font-size: 11px;
+    }
+
+    .price_and_status > h5 {
+        font-size: 16px;
+    }
+
+    .price_label {
+        min-width: 75px;
+        padding: 6px 10px;
+    }
+
+    .price_label h5 {
+        font-size: 11px;
+    }
+}

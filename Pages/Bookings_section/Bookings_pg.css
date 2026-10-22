@@ -1,0 +1,499 @@
+
+/* =========================================
+   PARKWISE - BOOKING CONFIRMATION PAGE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background-color: #f2f7fd;
+    color: #092c70;
+}
+
+/* =========================================
+   MAIN PAGE LAYOUT
+   ========================================= */
+
+.Main_pg {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f9ff;
+}
+
+/* =========================================
+   MAIN CONTENT AREA
+   ========================================= */
+
+.Main_pg_content {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 0 32px 35px;
+    background: #ffffff;
+}
+
+/* =========================================
+   TOP NAVIGATION BAR
+   ========================================= */
+
+.upper_nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e8eef7;
+    margin-bottom: 28px;
+}
+
+.upper_nav .navbar {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+}
+
+.upper_nav .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.upper_nav .navbar-form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+}
+
+.upper_nav .navbar-form button {
+    border: none;
+    background: transparent;
+    color: #0c347a;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.upper_nav .navbar-form button:hover {
+    color: #0860f7;
+    transform: translateX(-3px);
+}
+
+.upper_nav .navbar-form h5 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #092c70;
+}
+
+.profile_access {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile_access img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eaf2ff;
+}
+
+.profile_access h5 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #41639c;
+}
+
+/* =========================================
+   PARKING LOT DETAILS CARD
+   ========================================= */
+
+.Parking_lot_detials {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #e1eaf6;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(24, 67, 135, 0.035);
+    margin-bottom: 30px;
+}
+
+.Parking_lot_detials > div:first-child {
+    width: 110px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    overflow: hidden;
+    background: #edf3fa;
+}
+
+.Parking_lot_detials img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.Parking_lot_detials > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+}
+
+.Parking_lot_detials h5 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #082a70;
+    margin: 0 0 2px;
+}
+
+.Parking_lot_detials h6 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #45669c;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.Parking_lot_detials h6:last-child {
+    color: #27528f;
+}
+
+/* =========================================
+   FINAL PAYMENT SECTION
+   ========================================= */
+
+.Final_payment_card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+/* =========================================
+   DURATION SELECTION
+   ========================================= */
+
+.duration_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.Charges_card {
+    min-height: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #dce7f5;
+    border-radius: 9px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.Charges_card h6 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6680ae;
+}
+
+.Charges_card h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0860f7;
+}
+
+.Charges_card:hover {
+    border-color: #0860f7;
+    background: #f3f8ff;
+    box-shadow: 0 3px 10px rgba(0, 95, 255, 0.08);
+}
+
+/* Default selected duration - 1 Hour */
+
+.Charges_card:first-child {
+    border: 2px solid #0860ff;
+    background: #edf5ff;
+}
+
+.Charges_card:first-child h6,
+.Charges_card:first-child h5 {
+    color: #0860ff;
+}
+
+/* =========================================
+   TOTAL AMOUNT SECTION
+   ========================================= */
+
+.total_amount {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #e6edf7;
+    border-bottom: 1px solid #e6edf7;
+    margin-bottom: 25px;
+}
+
+.total_amount span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.total_amount h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #092c70;
+}
+
+.total_amount h6 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #092c70;
+}
+
+/* =========================================
+   PAYMENT METHOD SECTION
+   ========================================= */
+
+.Payment_mode {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Payment_mode::before {
+    content: "Payment Method";
+    font-size: 15px;
+    font-weight: 700;
+    color: #092c70;
+    margin-bottom: 13px;
+}
+
+.Payment_mode > div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #e2ebf7;
+    border-radius: 8px;
+    margin-bottom: 22px;
+}
+
+.Payment_mode input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 10px;
+    accent-color: #0860ff;
+    cursor: pointer;
+}
+
+.Payment_mode input[type="radio"]:first-child {
+    margin-left: 0;
+}
+
+.Payment_mode label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #173e80;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+}
+
+/* =========================================
+   PROCEED TO PAY BUTTON
+   ========================================= */
+
+.Payment_mode > button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 7px;
+    background: #0860ff;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 94, 255, 0.12);
+    transition: all 0.2s ease;
+}
+
+.Payment_mode > button:hover {
+    background: #004bdf;
+    box-shadow: 0 5px 14px rgba(0, 94, 255, 0.2);
+}
+
+.Payment_mode > button:active {
+    transform: scale(0.99);
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+   ========================================= */
+
+@media (max-width: 992px) {
+    .Side_nav_bar {
+        width: 190px;
+        min-width: 190px;
+    }
+
+    .Main_pg_content {
+        padding: 0 22px 30px;
+    }
+
+    .duration_container {
+        gap: 10px;
+    }
+
+    .Charges_card {
+        min-height: 90px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+    .Side_nav_bar {
+        width: 65px;
+        min-width: 65px;
+    }
+
+    .Side_nav_bar .sidebar-header {
+        padding: 12px 5px;
+        justify-content: center;
+    }
+
+    .Side_nav_bar .sidebar-brand img {
+        width: 50px;
+        max-width: 100%;
+    }
+
+    .Side_nav_bar .sidebar-nav {
+        padding: 15px 5px;
+    }
+
+    .Side_nav_bar .nav-link {
+        justify-content: center;
+        padding: 12px 5px;
+    }
+
+    .Side_nav_bar .nav-link h5 {
+        display: none;
+    }
+
+    .Side_nav_bar .nav-link i {
+        font-size: 19px;
+    }
+
+    .Main_pg_content {
+        padding: 0 14px 25px;
+    }
+
+    .upper_nav {
+        height: 65px;
+        margin-bottom: 20px;
+    }
+
+    .upper_nav .navbar-form {
+        gap: 8px;
+    }
+
+    .upper_nav .navbar-form h5 {
+        font-size: 15px;
+    }
+
+    .profile_access h5 {
+        display: none;
+    }
+
+    .Parking_lot_detials {
+        gap: 12px;
+        padding: 12px;
+        margin-bottom: 25px;
+    }
+
+    .Parking_lot_detials > div:first-child {
+        width: 75px;
+        height: 75px;
+    }
+
+    .Parking_lot_detials h5 {
+        font-size: 14px;
+    }
+
+    .Parking_lot_detials h6 {
+        font-size: 11px;
+    }
+
+    .duration_container {
+        gap: 7px;
+        margin-bottom: 25px;
+    }
+
+    .Charges_card {
+        min-height: 75px;
+        gap: 7px;
+    }
+
+    .Charges_card h6 {
+        font-size: 11px;
+    }
+
+    .Charges_card h5 {
+        font-size: 15px;
+    }
+
+    .total_amount h5 {
+        font-size: 14px;
+    }
+
+    .total_amount h6 {
+        font-size: 16px;
+    }
+
+    .Payment_mode > div {
+        gap: 8px;
+        padding: 12px 8px;
+    }
+
+    .Payment_mode label {
+        font-size: 11px;
+        margin-right: 3px;
+    }
+
+    .Payment_mode input[type="radio"] {
+        margin-left: 3px;
+    }
+
+    .Payment_mode > button {
+        height: 45px;
+        font-size: 13px;
+    }
+}

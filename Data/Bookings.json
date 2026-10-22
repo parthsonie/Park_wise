@@ -1,0 +1,47 @@
+[
+    {
+        "id": "PW123456",
+        "userId": 1,
+        "parkingLotId": 1,
+        "parkingName": "City Mall Parking",
+        "slotNumber": "A3",
+        "bookingDate": "2026-10-25",
+        "startTime": "10:00 AM",
+        "endTime": "11:00 AM",
+        "duration": 1,
+        "amount": 40,
+        "paymentMethod": "UPI",
+        "paymentStatus": "Paid",
+        "status": "Confirmed"
+    },
+    {
+        "id": "PW123457",
+        "userId": 1,
+        "parkingLotId": 2,
+        "parkingName": "Central Business Park",
+        "slotNumber": "B2",
+        "bookingDate": "2026-10-26",
+        "startTime": "11:00 AM",
+        "endTime": "01:00 PM",
+        "duration": 2,
+        "amount": 90,
+        "paymentMethod": "UPI",
+        "paymentStatus": "Pending",
+        "status": "Upcoming"
+    },
+    {
+        "id": "PW123458",
+        "userId": 1,
+        "parkingLotId": 3,
+        "parkingName": "Riverside Parking",
+        "slotNumber": "C1",
+        "bookingDate": "2026-10-18",
+        "startTime": "02:00 PM",
+        "endTime": "04:00 PM",
+        "duration": 2,
+        "amount": 60,
+        "paymentMethod": "UPI",
+        "paymentStatus": "Paid",
+        "status": "Completed"
+    }
+]
